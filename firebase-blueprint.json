@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Eco-Bounty platform user",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "recycledWeight": { "type": "number", "description": "Total weight recycled in kg" },
+        "balance": { "type": "number", "description": "Current balance in local currency" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "recycledWeight", "balance", "createdAt"]
+    },
+    "Bounty": {
+      "title": "Bounty",
+      "description": "A recycling reward active on the map",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "material": { "type": "string", "enum": ["PET", "Aluminum", "Cardboard", "Glass"] },
+        "value": { "type": "number", "description": "Reward amount" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "status": { "type": "string", "enum": ["available", "claimed", "completed"] },
+        "isDynamic": { "type": "boolean", "description": "Whether it has surge pricing" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "material", "value", "lat", "lng", "status", "createdAt"]
+    },
+    "Claim": {
+      "title": "Claim",
+      "description": "A user reservering/collecting a bounty",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bountyId": { "type": "string" },
+        "userId": { "type": "string" },
+        "materialDetected": { "type": "string" },
+        "weightDetected": { "type": "number" },
+        "photoUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "verified", "rejected"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "bountyId", "userId", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and stats"
+    },
+    "/bounties/{bountyId}": {
+      "schema": "Bounty",
+      "description": "Active recycling bounties"
+    },
+    "/claims/{claimId}": {
+      "schema": "Claim",
+      "description": "Bounty claims by users"
+    }
+  }
+}

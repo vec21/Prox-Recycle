@@ -1,0 +1,6 @@
+{
+  "name": "Eco-Bounty",
+  "description": "The Pokémon GO of recycling. Scan waste with AI, find high-value bounties on a dynamic map, and earn instant rewards.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": []
+}
