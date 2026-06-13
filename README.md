@@ -18,7 +18,7 @@ are auditable, traceable, and resistant to hallucination.
 |:---:|:---:|:---:|:---:|
 | ![Bounty Map](screenshots/1-map.png) | ![Bounty Detail](screenshots/2-bounty-detail.png) | ![Wallet Hub](screenshots/3-wallet.png) | ![Leaderboard](screenshots/4-leaderboard.png) |
 | Tactical map of live recycling bounties | Surge-priced bounty detail | Kanza balance & daily impact goal | Ranking by total mass recovered |
-
+▶️ **Demo video:** [demo-video/prox-recycle-demo.mp4](demo-video/prox-recycle-demo.mp4) — a 55s walkthrough of the full flow, including the live Foundry IQ grounded scan with citations.
 ---
 
 ## �💡 Microsoft IQ Integration — Foundry IQ
