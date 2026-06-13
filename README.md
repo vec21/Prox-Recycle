@@ -12,7 +12,16 @@ are auditable, traceable, and resistant to hallucination.
 
 ---
 
-## 💡 Microsoft IQ Integration — Foundry IQ
+## � Screenshots
+
+| Bounty Map | Bounty Detail | Wallet Hub | Leaderboard |
+|:---:|:---:|:---:|:---:|
+| ![Bounty Map](screenshots/1-map.png) | ![Bounty Detail](screenshots/2-bounty-detail.png) | ![Wallet Hub](screenshots/3-wallet.png) | ![Leaderboard](screenshots/4-leaderboard.png) |
+| Tactical map of live recycling bounties | Surge-priced bounty detail | Kanza balance & daily impact goal | Ranking by total mass recovered |
+
+---
+
+## �💡 Microsoft IQ Integration — Foundry IQ
 
 This project integrates the **Foundry IQ** intelligence layer (Azure AI Foundry):
 *"agentic knowledge retrieval that delivers cited, grounded answers to reduce hallucination."*
